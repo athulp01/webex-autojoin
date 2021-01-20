@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webex auto-join</title>
+    <script src="webex.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        initWebex();
+        window.setInterval(function () {
+            if (getCurrentMeeting() == undefined) {
+                unregister();
+            }
+        }, 10000)
+    </script>
+</body>
+
+</html>
